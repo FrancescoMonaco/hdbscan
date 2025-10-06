@@ -117,6 +117,10 @@ py::array_t<double> py_hdbscan(py::array_t<double, py::array::c_style | py::arra
     parlay::sequence<pargeo::point<20>> P(n);
     std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
     E = pargeo::hdbscan<20>(P, minPts);
+  } else if (dim == 50) {
+    parlay::sequence<pargeo::point<50>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<50>(P, minPts);
   } else {
     throw std::runtime_error("Only dimensions 2-20 is supported at the moment");
   }

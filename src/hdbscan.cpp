@@ -173,3 +173,4 @@ template sequence<wghEdge> pargeo::hdbscan<17>(sequence<point<17>> &, size_t);
 template sequence<wghEdge> pargeo::hdbscan<18>(sequence<point<18>> &, size_t);
 template sequence<wghEdge> pargeo::hdbscan<19>(sequence<point<19>> &, size_t);
 template sequence<wghEdge> pargeo::hdbscan<20>(sequence<point<20>> &, size_t);
+template sequence<wghEdge> pargeo::hdbscan<21>(sequence<point<50>> &, size_t);

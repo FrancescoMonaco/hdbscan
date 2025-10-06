@@ -30,9 +30,9 @@ namespace pargeo {
   namespace pointIO {
 
   string pbbsHeader(int dim) {
-    if (dim < 2 || dim > 9) {
-      throw std::runtime_error("Error, unsupported dimension");
-    }
+    // if (dim < 2 || dim > 9) {
+    //   throw std::runtime_error("Error, unsupported dimension");
+    // }
     return "pbbs_sequencePoint" + std::to_string(dim) + "d";
   }
 
