@@ -10,4 +10,4 @@ set(CMAKE_CXX_FLAGS "-DHOMEGROWN -pthread -O3 -DNDEBUG -fPIC ${EXTRA_FLAGS}")
 
 add_subdirectory(src)
 
-# add_subdirectory(pybindings)
+add_subdirectory(pybindings)
