@@ -14,10 +14,7 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
 
-      python =
-        # more recent versions of Python do not work, because of how frame pointers
-        # were reworked in Python 3.11
-        pkgs.python310;
+      python = pkgs.python312;
 
       # Find a way to propagate the submodules as part of the input directory
       python-package = python.pkgs.buildPythonPackage {
