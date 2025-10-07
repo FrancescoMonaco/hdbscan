@@ -121,6 +121,30 @@ py::array_t<double> py_hdbscan(py::array_t<double, py::array::c_style | py::arra
     parlay::sequence<pargeo::point<50>> P(n);
     std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
     E = pargeo::hdbscan<50>(P, minPts);
+  } else if (dim == 100) {
+    parlay::sequence<pargeo::point<100>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<100>(P, minPts);
+  } else if (dim == 128) {
+    parlay::sequence<pargeo::point<128>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<128>(P, minPts);
+  } else if (dim == 256) {
+    parlay::sequence<pargeo::point<256>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<256>(P, minPts);
+  } else if (dim == 512) {
+    parlay::sequence<pargeo::point<512>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<512>(P, minPts);
+  } else if (dim == 1024) {
+    parlay::sequence<pargeo::point<1024>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<1024>(P, minPts);
+  } else if (dim == 2048) {
+    parlay::sequence<pargeo::point<2048>> P(n);
+    std::memcpy(P.data(), array.data(), array.size() * sizeof(double));
+    E = pargeo::hdbscan<2048>(P, minPts);
   } else {
     throw std::runtime_error("Only dimensions 2-20 is supported at the moment");
   }

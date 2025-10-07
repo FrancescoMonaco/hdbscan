@@ -108,6 +108,21 @@ int main(int argc, char* argv[]) {
   else if (dim == 50) {
     parlay::sequence<pargeo::point<50>> Points = readPointsFromFile<pargeo::point<50>>(iFile);
     timeHdbscan<50>(Points, minPts, rounds, oFile, perturb);}
+  else if (dim == 128) {
+    parlay::sequence<pargeo::point<128>> Points = readPointsFromFile<pargeo::point<128>>(iFile);
+    timeHdbscan<128>(Points, minPts, rounds, oFile, perturb);}
+  else if (dim == 256) {
+    parlay::sequence<pargeo::point<256>> Points = readPointsFromFile<pargeo::point<256>>(iFile);
+    timeHdbscan<256>(Points, minPts, rounds, oFile, perturb);}
+  else if (dim == 512) {
+    parlay::sequence<pargeo::point<512>> Points = readPointsFromFile<pargeo::point<512>>(iFile);
+    timeHdbscan<512>(Points, minPts, rounds, oFile, perturb);}
+  else if (dim == 1024) {
+    parlay::sequence<pargeo::point<1024>> Points = readPointsFromFile<pargeo::point<1024>>(iFile);
+    timeHdbscan<1024>(Points, minPts, rounds, oFile, perturb);}
+  else if (dim == 2048) {
+    parlay::sequence<pargeo::point<2048>> Points = readPointsFromFile<pargeo::point<2048>>(iFile);
+    timeHdbscan<2048>(Points, minPts, rounds, oFile, perturb);}
   else {
     std::cout << "dim = " << dim << "\n";
     throw std::runtime_error("dimension not supported yet (2-20 is supported at the moment)");
