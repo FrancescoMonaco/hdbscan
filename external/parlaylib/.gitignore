@@ -1,3 +1,11 @@
+# Build directory
+build*
+
+# IDE settings
+.idea/
+CMakeSettings.json
+*.swp
+
 # Prerequisites
 *.d
 
@@ -30,15 +38,3 @@
 *.exe
 *.out
 *.app
-
-# Temporary files
-*.*~
-
-# Build files
-build/
-
-# Support directoreis
-.venv
-.direnv
-
-result
